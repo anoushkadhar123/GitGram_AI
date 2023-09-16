@@ -28,6 +28,11 @@ input {
   font-style: oblique;
   font-weight: 300;
   color: rgb(18, 211, 224);
+  padding: 4px 7px;
+  margin: 4px 5px;
+  align-items: center;
+  justify-content: center;
+
 }
 .card {
   background-color: rgb(59, 74, 75);
@@ -111,4 +116,41 @@ input {
   .user-info ul li {
     margin-bottom: 1rem;
   }
+}
+#search-history {
+  margin-top: 10px;
+  margin-left: 4px;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0..411);
+  border-radius: 10px;
+  font-style: oblique;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: rgb(18, 211, 224);
+  margin: 27px;
+  align-items: center;
+  justify-content: center;
+}
+#search-history ul {
+  list-style: none;
+  padding: 0;
+}
+#search-history ul li {
+  margin-bottom: 5px;
+}
+#filter {
+  margin-top: 10px;
+  margin-left: 44px;
+  background-color: rgba(0, 0, 0, 0.411);
+  font-family: "Playfair Display", serif;
+  font-style: oblique;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border-radius: 10px;
+  color: rgb(18, 211, 224);
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
