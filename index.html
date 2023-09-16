@@ -2,28 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitGram on the Go!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="images/icon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitGram on the Go!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="images/icon.png" type="image/x-icon" />
 </head>
 
 <body>
-    <form id="form"> <input type="text" id="search" placeholder="Search a Github User" /> </form>
-    <main id="main"></main>
-    <div class="container mt-5 mb-3 ftext">
-        <footer class="footer">
-            <p class="text-center text-muted"
-                style="font-style: oblique; font-weight: -400px; letter-spacing: 2px; color: rgb(27, 161, 161);"> Done
-                and Dusted :) by <a href="https://github.com/anoushkadhar123" class="text-main"
-                    style="font-style: oblique; font-weight: -400px; letter-spacing: 2px; color: rgb(28, 194, 194);">AD</a>
-            </p>
-        </footer>
-    </div>
-    <script type="text/javascript" src="index.js"></script>
+  <form id="form">
+    <input type="text" id="search" placeholder="Search a Github User" />
+  </form>
+  <main id="main"></main>
+  <div id="search-history">
+    <h3>Search History Of GitGram</h3>
+    <input type="text" id="filter" placeholder="GitGram History" />
+    <ul id="history-list"></ul>
+  </div>
+  <select id="filter">
+    <option value="all">All Gits</option>
+    <option value="oldest">Sort By Oldest</option>
+    <option value="newest">Sort By Newest</option>
+    <option value="most-searched">Sort By Most - Searched</option>
+  </select>
+  <ul id="search-history"></ul>
+  <div class="container mt-5 mb-3 ftext">
+    <footer class="footer">
+      <p class="text-center text-muted" style="
+            font-style: oblique;
+            font-weight: -400px;
+            letter-spacing: 2px;
+            color: rgb(27, 161, 161);
+          ">
+        Done and Dusted :) by
+        <a href="https://github.com/anoushkadhar123" class="text-main" style="
+              font-style: oblique;
+              font-weight: -400px;
+              letter-spacing: 2px;
+              color: rgb(28, 194, 194);
+            ">AD</a>
+      </p>
+    </footer>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
