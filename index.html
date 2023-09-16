@@ -14,6 +14,20 @@
 <body>
     <form id="form"> <input type="text" id="search" placeholder="Search a Github User" /> </form>
     <main id="main"></main>
+    <div id="search-history">
+        <h3> Search History of GitGram </h3><input type="text" id="filter" placeholder="GitGram History">
+        <ul id="history-list"></ul>
+    </div>
+    
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="oldest">Oldest</option>
+            <option value="newest">Newest</option>
+            <option value="most-searched">Most Searched</option>
+        </select>
+    
+    <ul id="search-history"></ul>
+    </div>
     <div class="container mt-5 mb-3 ftext">
         <footer class="footer">
             <p class="text-center text-muted"
