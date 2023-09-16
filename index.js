@@ -56,3 +56,48 @@ function addReposToCard(repos) {
       reposEl.appendChild(repoEl);
     });
 }
+
+// SEARCH HISTORY 
+
+// Initialize search history array
+let searchHistory = [];
+
+// Function to add search item to history
+function addToSearchHistory(username) {  
+  // Check if username already exists in history  
+  const existingItemIndex = searchHistory.findIndex(item => item.username === username);  
+  // If username exists, update the search count  
+  if (existingItemIndex !== -1) {    
+    searchHistory[existingItemIndex].count++;  
+  }  
+  else {    
+    // If username does not exist, add it to the history    
+    searchHistory.push({ username: username, count: 1 });  
+  }
+}
+// Function to display search history
+function displaySearchHistory() {  
+  const historyContainer = document.getElementById("search-history");  
+  historyContainer.innerHTML = "";  
+  searchHistory.forEach((term) => {    
+    const termEl = document.createElement("div");    
+    termEl.innerText = term.username;    
+    historyContainer.appendChild(termEl);  
+  });
+}
+// Function to clear search history
+function clearSearchHistory() {  
+  searchHistory = [];  
+  displaySearchHistory();
+}
+// Event listener for form submission
+form.addEventListener("submit",(e) => {  
+  e.preventDefault();  
+  const user = search.value;  
+  if(user) {    
+    getUser(user);    
+    search.value = "";    
+    addToSearchHistory(user);    
+    displaySearchHistory();  
+  }
+});
